@@ -80,7 +80,7 @@ function DiannexValue(val,
 	if (type == DiannexValueType.Undefined)
 	{
 		// Manually determine the type
-		if (is_struct(val) && instanceof(val) == "DiannexValue")
+		if (is_struct(val) && is_instanceof(val, DiannexValue))
 		{
 			// This is a Diannex value itself!
 			// Just copy over...

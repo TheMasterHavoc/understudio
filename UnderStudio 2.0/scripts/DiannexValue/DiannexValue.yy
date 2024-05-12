@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "DiannexValue",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Diannex",
-    "path": "folders/Diannex.yy",
+  "$GMScript":"",
+  "%Name":"DiannexValue",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DiannexValue",
+  "parent":{
+    "name":"Diannex",
+    "path":"folders/Diannex.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

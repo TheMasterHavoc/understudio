@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "audio",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Program Setup",
-    "path": "folders/Scripts/Program Setup.yy",
+  "$GMScript":"",
+  "%Name":"audio",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"audio",
+  "parent":{
+    "name":"Program Setup",
+    "path":"folders/Scripts/Program Setup.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

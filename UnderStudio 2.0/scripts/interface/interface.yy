@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "interface",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "User Interface",
-    "path": "folders/Scripts/User Interface.yy",
+  "$GMScript":"",
+  "%Name":"interface",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"interface",
+  "parent":{
+    "name":"User Interface",
+    "path":"folders/Scripts/User Interface.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

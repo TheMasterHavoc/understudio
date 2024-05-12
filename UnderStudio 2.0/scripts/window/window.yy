@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "window",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Program Setup",
-    "path": "folders/Scripts/Program Setup.yy",
+  "$GMScript":"",
+  "%Name":"window",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"window",
+  "parent":{
+    "name":"Program Setup",
+    "path":"folders/Scripts/Program Setup.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -129,7 +129,7 @@ function DiannexData() constructor
 			buffer_read(buff, buffer_u32); // Ignore size; we're going to read this now
 			var textCount = buffer_read(buff, buffer_u32); 
 			var _text = array_create(textCount);
-			var i = 0;
+			i = 0;
 			repeat (textCount)
 			    _text[i++] = buffer_read(buff, buffer_string);
 			text = _text;
@@ -155,7 +155,7 @@ function DiannexData() constructor
 		buffer_seek(buff, buffer_seek_start, funcOffset);
 		var funcCount = buffer_read(buff, buffer_u32);
 		functions = array_create(funcCount);
-		var i = 0;
+		i = 0;
 		repeat (funcCount)
 			functions[i++] = new DiannexFunction(buff, _strings);
 		
@@ -253,7 +253,7 @@ function DiannexData() constructor
 		}
 		
 		// Iterate over all functions, initialize flags to default values
-		var len = array_length(functions);
+		len = array_length(functions);
 		for (var i = 0; i < len; i++)
 		{
 			var currentFunc = functions[i];
@@ -296,7 +296,7 @@ function DiannexData() constructor
 		}
 		
 		// Iterate over all functions, initialize flags to default values, using names we already have
-		var len = array_length(functions);
+		len = array_length(functions);
 		for (var i = 0; i < len; i++)
 		{
 			var currentFunc = functions[i];

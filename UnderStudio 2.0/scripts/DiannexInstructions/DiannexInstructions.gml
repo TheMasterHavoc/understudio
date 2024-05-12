@@ -262,7 +262,7 @@ function __diannex_get_opcodes()
 	opcodes[DiannexOpcode.pushvarglb] = function()
 	{
 		programCounter += 5;
-		ds_stack_push(stack, variableGetHandler(data.strings[buffer_read(data.instructions, buffer_s32)]));
+		ds_stack_push(stack, new DiannexValue(variableGetHandler(data.strings[buffer_read(data.instructions, buffer_s32)])));
 	};
 
 	opcodes[DiannexOpcode.pushvarloc] = function()
@@ -272,6 +272,12 @@ function __diannex_get_opcodes()
 		if (argIndex >= ds_list_size(locals))
 			ds_stack_push(stack, new DiannexValue(undefined, DiannexValueType.Undefined));
 		ds_stack_push(stack, locals[| argIndex]);
+	};
+	
+	opcodes[DiannexOpcode.pop] = function()
+	{
+		programCounter++;
+		ds_stack_pop(stack);
 	};
 
 	opcodes[DiannexOpcode.dup] = function()
@@ -619,10 +625,10 @@ function __diannex_get_opcodes()
 	
 		var args = array_create(argCount);
 		for (var i = 0; i < argCount; i++) // arguments in stack are in correct order
-			args[i] = ds_stack_pop(stack);
+			args[i] = ds_stack_pop(stack).getRawValue();
 		
 		var handler = functionHandlers[$ argFuncName] ?? unregisteredFunctionHandler;
-		ds_stack_push(stack, new DiannexValue(script_execute_ext(handler, args)));
+		ds_stack_push(stack, new DiannexValue(method_call(handler, args)));
 	};
 
 	opcodes[DiannexOpcode.choicebeg] = function()
